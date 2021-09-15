@@ -21,7 +21,7 @@ $ cd laveIn
 #### 3. Crie um ambiente virtual e logo em seguida o ative:
 
 ```
-$ python3.6 virtualenv venv
+$ python3.6 -m virtualenv venv
 ```
 
 ```
