@@ -1,0 +1,23 @@
+<!-- Essa linha significa que essa página (Homepage) é filha da base principal ('main_base.html'), onde está sua estrutura. Esse arquivo aqui é tipo um componente. -->
+{% extends 'bases/main_base.html' %}
+
+<!-- Imports que cada "componente" (ou seja, arquivo de template) pode ter. A base principal já tem alguns, que vem junto. -->
+
+
+<!-- Dentro do bloco conteúdo é onde deve estar o conteúdo de qualquer página. -->
+{% block content %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-12">
+            <h1>Homepage, meus amores.</h1>
+            <br>
+            <hr>
+            {% if user.is_authenticated %}
+                <h5>Você está logado no sistema! :)</h5>
+            {% else %}
+                <h5>Você ainda não está logado no sistema! :(</h5>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}

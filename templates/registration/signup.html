@@ -1,0 +1,20 @@
+<!-- Essa linha significa que essa página (Homepage) é filha da base principal ('main_base.html'), onde está sua estrutura. Esse arquivo aqui é tipo um componente. -->
+{% extends 'bases/main_base.html' %}
+
+<!-- Dentro do bloco 'content' é onde deve estar o conteúdo de qualquer página. -->
+{% block content %}
+<div class="container">
+    <div class="row my-3">
+        <div class="col-12">
+            <h1>Registro, meus amores.</h1>
+            <br>
+            <hr>
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
