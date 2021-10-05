@@ -22,16 +22,10 @@
     
             <div class="col main-first-col p-5">
               <div class="left-painel">
-                <h1>Lorem Ipsum</h1>
-                <p>
-                   asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf asdfasdfasdfadf asdf asdfasdf
-                   adsfasdfsafasdf adsfsd asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-                   asdfasdfasdfadf asdf asdfasdf adsfasdfsafasdf adsfsd
-                   asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf asdfasdfasdfadf
-                   asdf asdfasdf 
-                </p>
+                <h1>{{ ads.0.title }}</h1>
+                <p>{{ ads.0.description }}</p>
               </div>
-              <button type="button" class="btn btn-light btn-lg">Nossas Lavanderias</button>
+              <button type="button" class="btn btn-light btn-lg"><a href="/ads/list">Nossas Lavanderias</a></button>
               <div class="w-100"></div>
               <br>
               <button type="button" class="btn btn-light btn-lg">Trabalhe Conosco</button>
@@ -76,36 +70,17 @@
             </div>
     
             <br>
-    
-            <!-- {% if user.is_authenticated %}
-                <h5>Você  já está logado no sistema! </h5>
-            {% else %}
-                <h5>Você ainda não está logado no sistema!</h5>
-            {% endif %} -->
   
       </div>
       <div class="row main-rating">
-        <div class="col">
-          <span>★★★★☆</span>
-          <p>5 dias atr[as</p>
-          <p>asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf asdfasdfasdfadf asdf asdfasdf
-            adsfasdfsafasdf adsfsd asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-            asdfasdfasdfadf asdf asdfasdf adsfasdf</p>
-        </div>
-        <div class="col">
-          <span>★★★★★</span>
-          <p>5 dias atr[as</p>
-          <p>asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf asdfasdfasdfadf asdf asdfasdf
-            adsfasdfsafasdf adsfsd asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-            asdfasdfasdfadf asdf asdfasdf adsfasdf</p>
-        </div>
-        <div class="col">
-          <span>★★★☆☆</span>
-          <p>5 dias atr[as</p>
-          <p>asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf asdfasdfasdfadf asdf asdfasdf
-            adsfasdfsafasdf adsfsd asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-            asdfasdfasdfadf asdf asdfasdf adsfasdf</p>
-        </div>
+        {% for ad in ads %}
+          <div class="col">
+            <span>★★★★☆</span>
+            <p style="font-size: 12px">{{ ad.created_at }}</p>
+            <p style="font-weight: semi-bold">{{ ad.title }}</p>
+            <p style="font-size: 16px">{{ ad.description }}</p>
+          </div>
+        {% endfor %}
       </div>
       <div class="row justify-content-end footer">
         <div class="col-1">

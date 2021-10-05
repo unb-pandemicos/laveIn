@@ -37,6 +37,7 @@
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto text-center text-md-left">
                 <a class="nav-link active" href="{% url 'pages:homepage' %}">Home</a>
+                <a class="nav-link" href="/ads/list">Lavanderias</a>
                 {% if not user.is_authenticated %}
                     <a class="nav-link"  href="{% url 'login' %}">Login</a>
                     <a class="nav-link" href="{% url 'signup' %}">Registro</a>
