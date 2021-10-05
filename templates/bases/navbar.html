@@ -33,17 +33,23 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav ms-auto text-center text-md-left">
                 <a class="nav-link active" href="{% url 'pages:homepage' %}">Home</a>
                 {% if not user.is_authenticated %}
-                <a class="nav-link"  href="{% url 'login' %}">Login</a>
-                <a class="nav-link" href="{% url 'signup' %}">Registro</a>
+                    <a class="nav-link"  href="{% url 'login' %}">Login</a>
+                    <a class="nav-link" href="{% url 'signup' %}">Registro</a>
                 {% endif %}
                 {% if user.is_authenticated %}
                     <a class="nav-link" href="{% url 'logout' %}">Logout</a>
                 {% endif %}
             </div>
+            {% if user.is_authenticated %}
+                <div class="navbar-user-email">
+                    <span>Usuário: {{ user }}</span>
+                </div>
+            {% endif %}
         </div>
     </div>
 </nav>

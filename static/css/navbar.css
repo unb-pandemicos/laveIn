@@ -11,3 +11,14 @@
     margin-top: auto;
     margin-bottom: auto;
 }
+
+.nav-link {
+    margin-left: 20px;
+}
+
+.navbar-user-email {
+    color: white;
+    margin-left: 30%;
+    margin-top: 8px;
+    font-size: 12px;
+}
