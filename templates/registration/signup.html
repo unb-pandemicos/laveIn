@@ -3,25 +3,39 @@
 
 <!-- Dentro do bloco 'content' é onde deve estar o conteúdo de qualquer página. -->
 {% block content %}
-<link rel="stylesheet" href="../../static/css/signup.css"/>
-<title> Lave-in | Registro</title>
+<link rel="stylesheet" href="../../static/css/signup.css" />
+<title>Lave-in | Registro</title>
 <div class="container-fluid ps-md-0">
-    <div class="row g-0">
-      <div class="d-none d-md-flex col-md-8 col-lg-6 bg-image"></div>
-      <div class="col-md-9 col-lg-4">
-        <div class="login d-flex align-items-center py-5">
-          <div class="container">
-             <div class="row">
-                <div class="registro">
-               <div class="col-12">
-                 <h3 >Registre-se | É gratuito!</h3>
-                    <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Registrar</button>
-            </form>
-        </div>
-    </div>
+	<div class="row g-0">
+		<div class="d-none d-md-flex col-md-8 col-lg-6 bg-image"></div>
+		<div class="col-md-9 col-lg-4">
+			<div class="login d-flex align-items-center py-5">
+				<div class="container">
+					<div class="row">
+						<div class="registro">
+							<div class="col-12">
+								<h3>Registre-se | É gratuito!</h3>
+								<form method="post">
+									{% csrf_token %} {{ form.as_p }}
+
+									<button
+										class="
+											btn btn-lg btn-primary btn-login
+											text-uppercase
+											fw-bold
+											mb-2
+										"
+										type="submit"
+									>
+										Registrar
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				{% endblock %}
+			</div>
+		</div>
+	</div>
 </div>
- </div>
-{% endblock %}
