@@ -26,7 +26,7 @@
               <button type="button" class="btn btn-light btn-lg"><a href="/ads/list">Nossas Lavanderias</a></button>
               <div class="w-100"></div>
               <br>
-              <button type="button" class="btn btn-light btn-lg">Trabalhe Conosco</button>
+              {% comment %} <button type="button" class="btn btn-light btn-lg">Trabalhe Conosco</button> {% endcomment %}
             </div>
     
             <div id="myCarousel" class="col-7 carousel slide" data-ride="carousel">
@@ -162,18 +162,15 @@
 
 				<br />
 
-				<!-- {% if user.is_authenticated %}
-                 <h5>Você  já está logado no sistema! </h5>
-             {% else %}
-                 <h5>Você ainda não está logado no sistema!</h5>
-             {% endif %} -->
 			</div>
 		</div>
 		<div class="row main-rating">
-			<div class="row-w-wrapper">
-				<div class="col">
+			<div class="ads-bottom-list">
+			<h2 class="pb-5 mb-5">Outras lavanderias</h2>
+			{% for ad in ads %}
+				<div class="col-6 mb-5">
 					<span>★★★★☆</span>
-					<p>5 dias atr[as</p>
+					<p>{{ ad.created_at }}</p>
 					<p>
 						asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
 						asdfasdfasdfadf asdf asdfasdf adsfasdfsafasdf adsfsd
@@ -181,26 +178,7 @@
 						asdfasdfasdfadf asdf asdfasdf adsfasdf
 					</p>
 				</div>
-				<div class="col">
-					<span>★★★★★</span>
-					<p>5 dias atr[as</p>
-					<p>
-						asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-						asdfasdfasdfadf asdf asdfasdf adsfasdfsafasdf adsfsd
-						asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-						asdfasdfasdfadf asdf asdfasdf adsfasdf
-					</p>
-				</div>
-				<div class="col">
-					<span>★★★☆☆</span>
-					<p>5 dias atr[as</p>
-					<p>
-						asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-						asdfasdfasdfadf asdf asdfasdf adsfasdfsafasdf adsfsd
-						asdgggggggggsadfdsafsad sdfasdfsad fasd fasdfasdf
-						asdfasdfasdfadf asdf asdfasdf adsfasdf
-					</p>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 		<div class="row justify-content-end footer">
