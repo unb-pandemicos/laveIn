@@ -1,0 +1,95 @@
+.body {
+	font-family: "Roboto", sans-serif;
+	background-color: #0074e0 !important;
+	margin: 0;
+}
+.main-page {
+	display: flex;
+	flex-direction: column;
+}
+
+.main-page .row {
+	width: 100vw;
+}
+.jumbotron {
+	padding-top: 0 !important;
+}
+.main-page .row-carousel {
+	background-color: #0074e0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.main-page .btn-light {
+	width: 200px;
+	box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.25);
+}
+
+.main-page .row-w-wrapper {
+	width: 1000px;
+	display: flex;
+}
+
+.main-page .left-painel {
+	width: 350px;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.main-page .left-painel h1 {
+	font-weight: 700;
+	font-size: 48px;
+	margin: 50px 0 10px 0;
+	color: white;
+}
+
+.main-page .left-painel p {
+	font-size: 16px;
+	margin-bottom: 30px;
+	color: white;
+}
+.main-page .carousel {
+	width: 600px;
+	height: 400px;
+	margin: 30px 0 40px 80px;
+}
+
+.main-page .carousel .item {
+	max-width: 600px;
+	max-height: 400px;
+}
+
+.main-page .carousel .carousel-inner .item img {
+	object-fit: fill;
+	width: 100%;
+	height: 100%;
+}
+
+.main-page .main-rating {
+	margin-top: 50px;
+	color: black;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	/* background-color: red; */
+}
+
+.main-page .main-rating span {
+	color: #fbbc04;
+}
+
+.main-page .main-rating .col {
+	padding: 0 30px;
+	width: 300px;
+}
+
+.ads-bottom-list {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}

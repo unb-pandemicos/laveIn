@@ -1,0 +1,14 @@
+.ads-container {
+  margin: 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  margin-right: 50px;
+}
