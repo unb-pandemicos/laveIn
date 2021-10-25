@@ -1,0 +1,12 @@
+.ads-container {
+  width: 600px;
+  margin: auto;
+  margin-top: 50px;
+}
+
+.ad-photo {
+  width: 600px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
