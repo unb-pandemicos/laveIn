@@ -1,0 +1,36 @@
+
+<!-- Essa linha significa que essa página (Homepage) é filha da base principal ('main_base.html'), onde está sua estrutura. Esse arquivo aqui é tipo um componente. -->
+{% extends 'bases/main_base.html' %}
+
+<!-- Imports que cada "componente" (ou seja, arquivo de template) pode ter. A base principal já tem alguns, que vem junto. -->
+
+
+<!-- Dentro do bloco conteúdo é onde deve estar o conteúdo de qualquer página. -->
+{% block content %}
+
+<title>Lave-in | Cadastro de lavanderias </title>
+{% include 'bases/navbar.html' %}
+<link rel="stylesheet" href="../../static/css/main.css"/>
+<link rel="stylesheet" href="../../static/css/ads_show.css"/>
+<div class="jumbotron jumbotron-fluid">
+  
+    <div class="main-page">
+        <div class="ads-container">
+            <img src="{{ad.photo1_url}}" class="ad-photo"/>
+
+            <h2 class="mt-4">{{ad.title}}</h2>
+
+            <p>{{ad.description}}</p>
+
+            <p class="text-muted">Endereço: {{ad.complete_address}}</p>
+            <p class="text-muted">Telefone: {{ad.phone}}</p>
+
+        </div>
+
+    </div>
+  
+</div>
+
+
+
+{% endblock %}

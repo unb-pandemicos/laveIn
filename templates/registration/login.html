@@ -4,19 +4,34 @@
 <!-- Dentro do bloco 'content' é onde deve estar o conteúdo de qualquer página. -->
 {% block content %}
 
-<div class="container">
-    <div class="row my-3">
-        <div class="col-12">
-            <h1>Login, meus amores.</h1>
-            <br>
-            <hr>
-            <form method="post">
-                {% csrf_token %}
-                {{ form.as_p }}
-                <button type="submit">Login</button>
-              </form>
+<title> Lave-in | Login</title>
+<link rel="stylesheet" href="../../static/css/login.css"/>
+<div id="abrirModal" class="modal"></div>
+<div class="container-fluid ps-md-0">
+    <div class="row g-0">
+      <div class="d-none d-md-flex col-md-4 col-lg-6 bg-image"></div>
+      <div class="col-md-8 col-lg-6">
+        <div class="login d-flex align-items-center py-5">
+          <div class="container">
+            <div class="row align-items-center">
+              <div class="login">
+              <div class="col-md-6 col-lg-6 mx-auto">
+                <h3 >Bem-Vindo!</h3>
+                <form method="post">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button class="btn btn-lg btn-primary btn-login text-uppercase fw-bold mb-2" type="submit">Entrar</button>
+                  </form>
+               
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </div>
+  
+
 
 {% endblock %}

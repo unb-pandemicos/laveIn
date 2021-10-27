@@ -1,0 +1,21 @@
+.ads-container {
+  margin: 20px 50px 50px 50px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advanced-filters {
+  margin-bottom: 20px;
+  padding: 50px 50px 20px 50px;
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 6px;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  margin-right: 45px;
+}
