@@ -3,7 +3,10 @@ from .models import Ad
 
 
 def GetAdsView(request):
-    ads = Ad.objects.all()
+    if request.GET.get('name') != None and request.GET.get('complete_address') != None:
+        ads = Ad.objects.filter(title__contains=request.GET.get('name'), complete_address__contains=request.GET.get('complete_address'))
+    else:
+        ads = Ad.objects.all()
     
     context = {
         'ads': ads,
