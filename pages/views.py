@@ -1,11 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 
-<<<<<<< HEAD
-# Create your views here.
-def homepage(request):
-    return render(request, 'pages/homepage.html' )
-=======
 from ads.models import Ad
 
 def homepage(request):
@@ -20,4 +15,3 @@ def homepage(request):
     }
 
     return render(request, 'pages/homepage.html', context)
->>>>>>> eac3cf274ba0aa8ca35eba82649b6d7e7c5f5460
